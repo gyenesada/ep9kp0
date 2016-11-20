@@ -1,0 +1,21 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1> {{book.cim}} </h1>
+<h4> {{book.szerzo}} </h4>
+
+<hr>
+<h4>Tartalom:</h4>
+<p>{{book.tartalom}}</p>
+
+<hr>
+
+<p><b>Kategória:</b> {{book.type.kategoria}}</p>
+<p><b>Kiadó:</b> {{book.kiado}}</p>
+<p><b>Oldalszám:</b> {{book.oldalszam}}</p>
+
+<a class="btn btn-primary" href="/book/{{ book.id }}/edit" role="button">Módosítás</a>
+<a class="btn btn-primary" href="/book/{{ book.id }}/addRead" role="button">Olvasott</a>
+<a class="btn btn-primary" href="/book/{{ book.id }}/quotes" role="button">Könyvhöz kapcsolódó idézetek</a>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1> Összes könyv</h1>
+
+{% for book in books %}
+           <ul class="list-group">
+                 <li class="list-group-item">                 
+                    <b>{{book.szerzo}}</b>
+                </li>
+                <li class="list-group-item">
+                    <a href="../book/{{ book.id }}">{{ book.cim }}</a>
+                </li>
+            </ul>
+{% endfor %}
+{% endblock %}

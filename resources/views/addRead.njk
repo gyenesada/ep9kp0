@@ -1,0 +1,35 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1>Olvasottnak jelölés </h1>
+{%if currentUser%}
+<form class="form-horizontal" action="addRead" method="POST">
+  {{ csrfField }}
+
+  <div class="form-group">
+    <label for="inputuser" class="col-sm-2 control-label">{{currentUser.username}} id:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputuser" name ="user_id" value="{{currentUser.id}}" readonly>
+    </div>
+</div>
+
+  <div class="form-group">
+    <label for="inputuser" class="col-sm-2 control-label">{{book.cim}} id: </label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputuser" name ="booktable_id" value="{{book.id}}" readonly>
+    </div>
+    </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary" >Megjelölés olvasottként</button>
+    </div>
+  </div>
+</form>
+{%else%}
+<h2> Ezt az oldalt csak bejelentkezett felhasználók tekinthetik meg. </h2>
+<p> A regisztrációért kattints <a href="/reg">ide</a>. Amennyiben már regisztráltál, kérjük jelentkezz be. </p>
+<a class="btn btn-primary" href="/login" role="button">Bejelentkezés</a>
+{%endif%}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1> Könyvek kategóriák szerint </h1>
+
+<div class="row">
+    {% for type in types %}
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><a href="/type/{{type.id}}">{{ type.kategoria }}  </a></div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<hr>
+<h1> Kell még ide valami... </h1>
+{% endblock %}

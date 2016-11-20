@@ -1,0 +1,20 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1> {{book.cim}} c. könyvhöz tartozó idézetek listája</h1>
+<h1></h1>
+
+{% for t in book.quotes %}
+           <ul class="list-group">
+                 <li class="list-group-item">                 
+                    ,,{{t.idezet}}"
+                    
+                    {%if currentUser%} 
+                    <hr>
+                    <a class="btn btn-primary" href="/book/{{book.id}}/quotes/{{t.id}}/delete" role="button">Törlés</a>
+                    <a class="btn btn-primary" href="/book/{{book.id}}/quotes/{{t.id}}/edit" role="button">Módosítás</a>
+                    {%endif%}
+                </li>
+            </ul>
+{% endfor %}
+{% endblock %}

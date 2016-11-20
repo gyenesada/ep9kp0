@@ -1,0 +1,16 @@
+{% extends 'master' %}
+
+{% block content %}
+<h4> {{type.kategoria}} könyvek listája</h4>
+
+{% for t in type.books %}
+           <ul class="list-group">
+                 <li class="list-group-item">                 
+                    <b>{{t.szerzo}}</b>
+                </li>
+                <li class="list-group-item">
+                    <a href="../book/{{ t.id }}">{{ t.cim }}</a>
+                </li>
+            </ul>
+{% endfor %}
+{% endblock %}

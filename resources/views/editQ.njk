@@ -1,0 +1,52 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1>Idézet módosítása</h1>
+
+{%if currentUser%}
+{% if old('errors') %}
+
+ <div class="alert alert-danger" role="alert">
+     <ul>
+     {% for error in old('errors') %}
+    <li>{{ error.message }}</li>
+    {% endfor %}
+    </ul>
+ </div>
+ {% endif %}
+
+<form class="form-horizontal" action="edit" method="POST">
+  {{ csrfField }}
+
+ <div class="form-group">
+    <label for="inputCim" class="col-sm-2 control-label">Könyv címe</label>
+    <div class="col-sm-10">
+     <select class="form-control" id="inputCim" name="booktable_id">
+        <option value="{{quote.book.id}}">{{quote.book.cim}}</option> 
+   </select>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="inputText" class="col-sm-2 control-label">Idézet szövege</label>
+    <div class="col-sm-10">
+     <textarea class="form-control" rows="3" id="inputText", name="idezet">{{quote.idezet}}</textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Mentés</button>
+      
+    <a class="btn btn-primary" href="../" role="button">Mégsem</a>
+    </div>
+    
+  </div>
+</form>
+{%else%}
+<h2> Ezt az oldalt csak bejelentkezett felhasználók tekinthetik meg. </h2>
+<p> A regisztrációért kattints <a href="/reg">ide</a>. Amennyiben már regisztráltál, kérjük jelentkezz be. </p>
+<a class="btn btn-primary" href="/login" role="button">Bejelentkezés</a>
+{%endif%}
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1>Keresés könyvek között</h1>
+<hr>
+<form action="/books" method="GET">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="inputCim">Könyv címe</label>
+          <input type="text" class="form-control" placeholder="Cím" id="inputRecipeName" name="cim" value="{{ filters.cim }}">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="inputCategory">Kategória</label>
+          <select class="form-control" id="inputCategory" name="kategoria">
+            <option value="">--</option>
+            {% for type in types %}
+            {% if filters.kategoria == type.id %}
+            <option value="{{ type.id }}" selected>{{ type.kategoria }}</option>
+            {% else %}
+            <option value="{{ type.id }}">{{ type.kategoria }}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>&nbsp;</label>
+          <button class="btn btn-block btn-primary" type="submit">Szűrés</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+  
+  <h2>Találatok ({{ books.total }})</h2>
+  {% for bookBatch in books.data | batch(3) %}
+  <div class="row">
+    {% for book in bookBatch %}
+    <div class="col-md-4">
+      <a class="result-item" href="/book/{{ book.id }}">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <strong>{{ book.cim }}</strong><br>
+            szerző <em>{{ book.szerzo }}</em>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  Nincs a szűrésnek megfelelő könyv.
+  {% endfor %}
+  {% if books.lastPage > 1 %}
+  <div class="text-center">
+    <ul class="pagination">
+      {% for page in range(1, books.lastPage + 1) %}
+      {% if page == books.currentPage %}
+      <li class="active">
+        <a href="/books?p={{ page }}&amp;cim={{ filters.cim }}&amp;kategoria={{ filters.kategoria }}&amp">{{ page }}</a>
+      </li>
+      {% else %}
+      <li><a href="/books?p={{ page }}&amp;cim={{ filters.cim }}&amp;kategoria={{ filters.kategoria }}&amp">{{ page }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+
+{% endblock %}

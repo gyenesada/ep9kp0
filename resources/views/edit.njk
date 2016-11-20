@@ -1,0 +1,78 @@
+{% extends 'master' %}
+
+{% block content %}
+<h1>Könyv adatainak módosítása</h1>
+{%if currentUser%}
+{% if old('errors') %}
+ <div class="alert alert-danger" role="alert">
+     <ul>
+     {% for error in old('errors') %}
+    <li>{{ error.message }}</li>
+    {% endfor %}
+    </ul>
+ </div>
+ {% endif %}
+<form class="form-horizontal" action="edit" method="POST">
+  {{ csrfField }}
+
+  <div class="form-group">
+    <label for="inputCim" class="col-sm-2 control-label">Cím</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputCim" name ="cim" value="{{book.cim}}">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="inputSzerzo" class="col-sm-2 control-label">Szerző</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputSzerzo" name ="szerzo" value="{{book.szerzo}}">
+    </div>
+</div>
+
+  <div class="form-group">
+    <label for="inputKat" class="col-sm-2 control-label">Kategória</label>
+    <div class="col-sm-10">
+     <select class="form-control" id="inputKat" name="type_id">
+     {%for type in types%}
+        <option value="{{type.id}}">{{type.kategoria}}</option> 
+      {%endfor%}
+   </select>
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="inputKiado" class="col-sm-2 control-label">Kiadó</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputKiado" name ="kiado" value="{{book.kiado}}">
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="inputOldal" class="col-sm-2 control-label">Oldalszám</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputOldal" name ="oldalszam" value="{{book.oldalszam}}">
+    </div>
+</div>
+
+  <div class="form-group">
+    <label for="inputTartalom" class="col-sm-2 control-label">Rövid tartalom</label>
+    <div class="col-sm-10">
+     <textarea class="form-control" rows="3" id="inputTartalom", name="tartalom">{{book.tartalom}}</textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Módosítás</button>
+      
+      <a class="btn btn-primary" href="./" role="button">Mégsem</a>
+    </div>
+  </div>
+  
+</form>
+{%else%}
+<h2> Ezt az oldalt csak bejelentkezett felhasználók tekinthetik meg. </h2>
+<p> A regisztrációért kattints <a href="/reg">ide</a>. Amennyiben már regisztráltál, kérjük jelentkezz be. </p>
+<a class="btn btn-primary" href="/login" role="button">Bejelentkezés</a>
+{%endif%}
+{% endblock %}
