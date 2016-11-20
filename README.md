@@ -1,4 +1,4 @@
- ## 1. Beadandó
+<h1>1. Beadandó</h1>
  
  Feladat vállalása: 
   Könyvek és idézetek nyílvántartása webes felületen (Mini-moly.hu)
@@ -8,7 +8,8 @@
   <ul>
   <li> szeretnék szabadon könyvekre keresni </li>
   <li> szeretnék regisztrálni, illetve belépni ha ezt megtettem </li> 
-  <li> szeretnék olvasni könyvek általános információiról </li>
+  <li> szeretnék olvasni könyvek általános információiról és a hozzátartozott idézeteket megtekinteni</li>
+  <li> szűrni könyvekre több feltétel szerint </li>
   </ul></p>
           
  <p><i>Felhasználóként:</i>
@@ -16,9 +17,9 @@
   <li> szeretnék belépni az oldalra </li> 
   <li> szeretném az olvasott könyveket bejelölni </li> 
  <li> szeretnék új könyvet/idézetet hozzáadni </li> 
- <li> szeretném a kiválasztott könyvet magánkönyvtáramhoz adni </li> 
- <li> szeretném a kiválasztott könyvet kedvencnek jelölni </li>
- <li> szeretném profiladataimat szerkeszteni </li>
+ <li> szeretném a meglévő könyveket/idézeteket módosítani </li> 
+ <li> szeretném a fentlévő idézeteket törölni </li>
+ <li> szeretném profiladataimat megtekinteni </li>
  <li> szeretnék kijelentkezni </li>
  </ul></p>
  
@@ -29,7 +30,7 @@
  <li> Gyors hozzáférés </li> 
  </ul>
  
- ##2.beadandó
+<h1>2.beadandó</h1>
  
  <p><b>Use-case diagram</b></p>
  ![Use-case diagram](usecase.png)
