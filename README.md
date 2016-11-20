@@ -30,10 +30,10 @@
  </ul>
  
  <p><b>Use-case diagram</b></p>
- ![Use-case diagram](imgs/usecase.png)
+ ![Use-case diagram](usecase.png)
          
  <p><b>Adatmodellek</b></p>        
- ![Adatmodellek](imgs/adatmod.png)
+ ![Adatmodellek](datab.png)
  <p><b>Szakterületi fogalomjegyzék</b> </p>
  <ul> 
  <li><b>Könyv:</b> Bármilyen nyelven íródott szöveget és/vagy képeket tartalmazó
@@ -61,52 +61,63 @@
  <ul>
  <li> Kilépés </li>
  <li> Profiladatok </li>
- <ul><li> Profil szerkesztése</li></ul>
+ <ul><li> Olvasott könyvek megtekintése</li></ul>
  <li> Új könyv felvitele </li>
- <li> Új idézet felvitele </li>
- <li> Kedvenc könyvek kezelése </li>
- <ul><li>  Hozzáadás a listához</li> <li>  Törlés a listáról </li> </ul> 
- <li> Magánkönyvtár kezelése </li>
- <ul><li>  Hozzáadás a listához</li> <li>  Törlés a listáról </li> </ul> 
+ <li> Új idézet felvitele </li> 
  <li> Olvasott könyvek kezelése </li> 
- <ul><li>  Hozzáadás a listához</li> <li>  Törlés a listáról </li> </ul> 
+ <ul><li>  Hozzáadás a listához</li></ul> 
+ <li> Könyvek szűrése</li>
+ <ul><li> Könyv adatainak módosítása <li> <li> idézetek megtekintése</li><ul><li>idézet törlése</li> <li> idézet módosítása</li></ul><li>olvasottnak jelölés</li></ul>
  </ul>
  
  <p><b>Folyamatok meghatározása</b></p>
- <p>Új könyv, illetve idézet felvitele felhasználók számára</p>
- ![Új könyv foly.](imgs/first.png)
- <p>Könyvvel való viszony szerkesztése felhasználók számára</p>
- ![fav/own/read](imgs/second.png)
- <p>Felhasználó számára elérhető lehetőségek</p> 
- ![Lehetőségek](imgs/third.png)
- <p><i>Lehetőségekbe beletartozik: Új könyv felvitele, Új idézet felvitele, profiladatok szerkesztése, kedvenc könyvek megtekintése, magánkönyvtár megtekintése, olvasott könyvek megtekintése</i></p>
+ <p>Könyv adatinak módosítása felhasználóknak</p>
+ ![](folyam1.png)
+ <p>Idézet felvitele (könyv esetén is)</p>
+ ![](folyam2.png)
  
  <p><b>Végpontok</b><p>
  <ul>
  <li> <b> GET/:</b> főoldal</li> 
  <li> <b> GET/login:</b> bejelentkező oldal</li> 
  <li> <b> POST/login:</b> bejelentkezési adatok feltöltése</li> 
- <li> <b> GET/profile:</b> profiladatok lekérése</li> 
+ <li> <b> GET/reg:</b> regisztráció oldal </li>
+ <li> <b> POST/reg: </b> regisztrációs adatok feltöltése</li>
+ <li> <b> GET/profile/user_id:</b> profiladatok lekérése</li> 
  <li> <b> GET/books:</b> könyvlista</li> 
- <li> <b> GET/books/:id :</b> könyv megtekintése</li> 
- <li> <b> GET/books/:quotes:</b> könyv idézeteinek megtekintése</li> 
- <li> <b> GET/books/:create:</b> új könyv felvitele, és űrlap megtekintése</li> 
- <li> <b> POST/books/:create:</b> új könyv felvitele, adatok küldése</li> 
- <li> <b> GET/books/:quotes/:create:</b> új idézet felvitele, és űrlap megtekintése</li>
- <li> <b> POST/books/:quotes/:create:</b> új idézet adatainak beküldése</li> 
- <li> <b> GET/profile/:favorites:</b> kedvenc könyvek megtekintése</li> 
- <li> <b> GET/profile/:own: </b> saját könyvek megtekintése</li> 
- <li> <b> GET/profile/:read:</b> olvasott könyvek megtekintése</li> 
+ <li> <b> GET/book/:id :</b> könyv megtekintése</li> 
+ <li> <b> GET/books/:id/:quotes:</b> könyv idézeteinek megtekintése</li> 
+ <li> <b> GET/addBook:</b> új könyv felvitele, és űrlap megtekintése</li> 
+ <li> <b> POST/addBook:</b> új könyv felvitele, adatok küldése</li> 
+ <li> <b> GET/addQuote:</b> új idézet felvitele, és űrlap megtekintése</li>
+ <li> <b> POST/addQuote: </b> új idézet adatainak beküldése</li> 
+ <li> <b> GET/books/:id/edit:</b> könyv módosítás űrlap</li> 
+ <li> <b> POST/books/:id/edit:</b> könyv módosítás adatinak feltöltése</li> 
+ <li> <b> GET/books/:id/quotes/:id/delete: </b> idézet törlése</li>
+ <li> <b> GET/books/:id/quotes/:id/edit: </b> idézet módosítási űrlap</li>
+ <li> <b> GET/books/:id/addRead:</b> könyv olvasottnak jelölése</li> 
+ <li> <b> POST/books/:id/addRead:</b> olvasottnak jelölés adatinak feltöltése</li> 
+ <li> <b> GET/type/:id: </b> típus szerinti könyvszűrés </li>
+ <li> <b> GET/allBook: </b> minden könyv listázása </li>
+ <li> <b> GET/logout: </b> kijelentkezés </li>
+ 
  </ul>
  
  <p><b>Oldalvázlat</b></p>
  <p>Főoldal</p>
- ![Főoldal](imgs/main.png)
+ ![Főoldal](main.png)
  <p>Profil</p>
- ![Profiladatok](imgs/profile.png)3
+ ![Profiladatok](profil.png)
  <p>Könyv adatok</p>
- ![Könyv információk](imgs/book infos.png)
- <p>Keresési találatok / kedvenc könyvek..stb (Könyvek listája)</p>
- ![Könyvek listázása](imgs/book-list.png)
+ ![Könyv információk](könyvoldal.png)
+ <p>Szűrés</p>
+ ![Könyvek listázása](szüres.png)
  <p>Új könyv/idézet hozzáadása</p>
- ![Új hozzáadás](imgs/add-new-book.png)
+ ![Új hozzáadás](új könyv.png)
+ <p>Belépés</p>
+ ![Belépés](belepes.png)
+  <p>Regisztráció</p>
+ ![Belépés](reg.png)
+ <p>Idézet oldal</p>
+ ![Idézet](idezetoldal.png)
+ 
