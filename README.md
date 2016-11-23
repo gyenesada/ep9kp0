@@ -124,3 +124,30 @@
  <p>Idézet oldal</p>
  ![Idézet](idezetoldal.png)
  
+<p><b>Felhasználói dokumentáció </b></p>
+<p>
+<b>Szükséges: </b>
+<ul> <li> <b> operációs rendszer: </b>tetszőleges.</li>
+<li><b> hardver: </b> operációs rendszer szerint megadva. </li>
+<li><b> egyéb: </b> böngésző használata (JavaScript ajánlott)</li>
+</ul></p>
+
+<p><b>Használat:</b> </p>
+<p><ol>
+<li> Böngésző megnyitása, főoldalra lépés </li>
+<li> Jobb felső sarokban a belépés az oldalra legördülő menüben kiválasztjuk a Regisztrációt/Bejelentkezés.</li>
+<li> Ezek után visszakerülünk a főoldalra.</li>
+<li> A Menü legördülő lista alatt kiválasztjuk az új könyv/idézet felvitele opciót.</li>
+<li> Űrlap kitöltése.</li>
+<li> Hiba esetén ismételt kitöltés. </li>
+<li> Adatok beküldése, mentése.</li>
+<li> Főoldalon: Kategóriák szerint könyvek csoportosítása.</li>
+<li> Könyv oldal: Módosításra kattintva, a már létező könyvek adatait tudjuk módosítani, felküldeni és menteni.</li>
+<li> Könyv oldal: Olvasottnak jelölés esetén a könyvet olvasottnak jelölhetjük.</li>
+<li> Könyv oldal: Könyvhöz kapcsolódó idézetekre kattintva idézetgyűjtő oldalra jutunk.</li>
+<li> Idézet oldal: Törlés gombra kattintva, kiválasztott idézethez tartozó idézet törlése.</li>
+<li> Idézet oldal: Módosítás esetén már meglévő idézet adatait tudjuk módosítani.</li>
+<li> Az oldalon fent megtaláljuk az összes könyv opciót, ami hozzáadás sorrendjében kilistázza az oldalon található összes könyvet.</li>
+<li> Profil: Saját adatainkon kívül megtudjuk tekinteni az általunk olvasottnak jelölt könyveket.</li>
+<li> Könyvek böngészése: Kategória és cím alapján tudunk szűrni az oldalon lévő könyvekre. A címre kattintva előjön a kiválasztott könyv adatlapja.</li>
+<li> A folyamat befejezéseként válasszuk ki a jobb felső sarokban található Kijelentkezés funkciót.</li></ol></p>
