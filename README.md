@@ -3,7 +3,7 @@
  Feladat vállalása: 
   Könyvek és idézetek nyílvántartása webes felületen (Mini-moly.hu)
   
-<b>Funkcionális követelmények:</b>
+<h2><b>Funkcionális követelmények:</b></h2>
  <p><i>Vendégként:</i>
   <ul>
   <li> szeretnék szabadon könyvekre keresni </li>
@@ -23,7 +23,7 @@
  <li> szeretnék kijelentkezni </li>
  </ul></p>
  
-<b>Nem funkcionális követelmények: </b>
+<h2><b>Nem funkcionális követelmények: </b></h2>
  <ul>
  <li> Felhasználóbarát </li>
  <li> Biztonságos </li>
