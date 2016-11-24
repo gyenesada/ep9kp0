@@ -3,7 +3,7 @@
  Feladat vállalása: 
   Könyvek és idézetek nyílvántartása webes felületen (Mini-moly.hu)
   
-  <b>Funkcionális követelmények:</b>
+<b>Funkcionális követelmények:</b>
  <p><i>Vendégként:</i>
   <ul>
   <li> szeretnék szabadon könyvekre keresni </li>
@@ -23,7 +23,7 @@
  <li> szeretnék kijelentkezni </li>
  </ul></p>
  
- <b>Nem funkcionális követelmények: </b>
+<b>Nem funkcionális követelmények: </b>
  <ul>
  <li> Felhasználóbarát </li>
  <li> Biztonságos </li>
@@ -32,12 +32,12 @@
  
 <h1>2.beadandó</h1>
  
- <p><b>Use-case diagram</b></p>
+ <h2><p><b>Use-case diagram</b></p></h2>
  ![Use-case diagram](usecase.png)
          
- <p><b>Adatmodellek</b></p>        
+ <h2><p><b>Adatmodellek</b></p></h2>
  ![Adatmodellek](datab.png)
- <p><b>Szakterületi fogalomjegyzék</b> </p>
+ <h2><p><b>Szakterületi fogalomjegyzék</b> </p></h2>
  <ul> 
  <li><b>Könyv:</b> Bármilyen nyelven íródott szöveget és/vagy képeket tartalmazó
  fizikális vagy digitális gyűjtemény, melyet a szerző és/vagy célközönség
@@ -45,13 +45,13 @@
  <li><b>Idézet:</b> Könyvből kiragadott, pár mondatot tartalmazó szöveg.</li> 
  </ul>
  
- <p><b>Szerepkörök</b></p>
+ <h2><p><b>Szerepkörök</b></p></h2>
  <ul>
  <li><b>vendég: </b>könyvek keresését, böngészését és megtekintését végezheti, illetve regisztrálhat.</li>
- <li><b>felhasználó: </b>a vendég szerepkörén túl saját olvasásait kezelheti, új könyveket illetve idézeteket vihet fel, profiladatait módosíthatja, könyveket jelölhet magánkönyvtárba, illetve kedvencnek. </li>
+ <li><b>felhasználó: </b>a vendég szerepkörén túl saját olvasásait kezelheti, új könyveket illetve idézeteket vihet fel, módosíthatja, illetve törölheti a kívánt idézeteket. </li>
  </ul>
  
- <p><b>Oldaltérkép</b></p>
+ <h2><p><b>Oldaltérkép</b></p></h2>
  <b>publikus: </b>
  <ul>
  <li> Főoldal</li>
@@ -73,13 +73,13 @@
  <ul><li> Könyv adatainak módosítása <li> <li> idézetek megtekintése</li><ul><li>idézet törlése</li> <li> idézet módosítása</li></ul><li>olvasottnak jelölés</li></ul>
  </ul>
  
- <p><b>Folyamatok meghatározása</b></p>
+ <h2><p><b>Folyamatok meghatározása</b></p></h2>
  <p>Könyv adatinak módosítása felhasználóknak</p>
  ![](folyam1.png)
  <p>Idézet felvitele (könyv esetén is)</p>
  ![](folyam2.png)
  
- <p><b>Végpontok</b><p>
+ <h2><p><b>Végpontok</b><p></h2>
  <ul>
  <li> <b> GET/:</b> főoldal</li> 
  <li> <b> GET/login:</b> bejelentkező oldal</li> 
@@ -106,7 +106,7 @@
  
  </ul>
  
- <p><b>Oldalvázlat</b></p>
+ <h2><p><b>Oldalvázlat</b></p></h2>
  <p>Főoldal</p>
  ![Főoldal](main.png)
  <p>Profil</p>
@@ -124,7 +124,7 @@
  <p>Idézet oldal</p>
  ![Idézet](idezetoldal.png)
  
-<p><b>Felhasználói dokumentáció </b></p>
+<h2><p><b>Felhasználói dokumentáció </b></p></h2>
 <p>
 <b>Szükséges: </b>
 <ul> <li> <b> operációs rendszer: </b>tetszőleges.</li>
