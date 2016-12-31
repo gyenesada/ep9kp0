@@ -145,15 +145,15 @@
 <p> <b> Tesztesetek </b> </p>
  <ul><li> Bejelentkezés - kijelentkezés: <i> ok. </i> - <a href="/tests/Login_logout.html"> link </a></li>
  <li> Regisztráció: <i> ok. </i> - <a href="/tests/Registration.html"> link </a></li>
- <li> Profil megtekintése: <i> ok. </i> - <a href="/tests/ViewProfile.html"> link </a></li>
  <li> Könyvek közötti keresés: <i> ok. </i> - <a href="/tests/SearchBooks.html"> link </a></li>
  <li> Könyv hozzáadása: <i> ok. </i> - <a href="/tests/AddBook.html"> link </a></li>
- <li> Könyv szerkesztése: <i> ok. </i> - <a href="/tests/EditBook.html"> link </a></li>
+ <li> Könyv és idézet szerkesztése: <i> ok. </i> - <a href="/tests/EditBook_Quote.html"> link </a></li>
  <li> Idézet hozzáadása: <i> ok. </i> - <a href="/tests/AddQuote.html"> link </a></li>
- <li> Idézet szerkesztése: <i> ok. </i> - <a href="/tests/EditQuote.html"> link </a></li>
  <li> Idézet törlése: <i> ok. </i> - <a href="/tests/DeleteQuote.html"> link </a></li>
- <li> Olvasottnak jelölése: <i> ok. - </i><a href="/tests/AddRead.html"> link </a></li>
  </ul>
+ 
+ 
+ ![Teszt](images/success.png)
  
  
 <h2><p><b>Felhasználói dokumentáció </b></p></h2>
