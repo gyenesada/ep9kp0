@@ -110,7 +110,7 @@
  <p>Főoldal</p>
  ![Főoldal](main.png)
  <p>Profil</p>
- ![Profiladatok](profil.png)
+ ![Profiladatok](images/profil.png)
  <p>Könyv adatok</p>
  ![Könyv információk](könyvoldal.png)
  <p>Szűrés</p>
@@ -123,6 +123,38 @@
  ![Belépés](reg.png)
  <p>Idézet oldal</p>
  ![Idézet](idezetoldal.png)
+ 
+ <h2> <p> <b> JavaScript-el történő fejlesztések </b> </p> </h2>
+ <ul>
+ <li> <b> AJAX Funkciók </b> 
+ <ul> <li> ajaxDelete.js - Törlési megerősítés idézetek törlése közben. </li> 
+ <li> ajaxLogin.js - Bejelentkezés esetén felugró ablak. </li>
+ <li> ajaxLogout.js - Kijelentkezés esetén megerősítés. </li>
+ </ul>
+ </li>
+ <li> <b> Egyéb funkciók </b>
+ <ul><li> Űrlap validáció - Új könyv hozzáadása esetén megvizsgálja a bemeneti adatok helyességét/meglétét.</li>
+ <li> Űrlap validáció - Új idézet hozzáadása esetén megvizsgálja a bemenetei adatok helyességét/meglétét.</li>
+ <li> Legördülő menü - JavaScript bekapcsolása mellett a 'Menü' fül legördülő menü lesz. </li>
+ <li> Legördülő menü - JavaScript bekapcsolása mellett az 'Üdv [felhasználó]!' fül legördülő menü lesz. </li>
+ </ul></li>
+ </ul>
+ 
+ 
+ <h2> <p> <b> Funkcionális tesztelés </b> </p> </h2>
+<p> <b> Tesztesetek </b> </p>
+ <ul><li> Bejelentkezés - kijelentkezés: <i> ok. </i> - <a href="/tests/Login_logout.html"> link </a></li>
+ <li> Regisztráció: <i> ok. </i> - <a href="/tests/Registration.html"> link </a></li>
+ <li> Profil megtekintése: <i> ok. </i> - <a href="/tests/ViewProfile.html"> link </a></li>
+ <li> Könyvek közötti keresés: <i> ok. </i> - <a href="/tests/SearchBooks.html"> link </a></li>
+ <li> Könyv hozzáadása: <i> ok. </i> - <a href="/tests/AddBook.html"> link </a></li>
+ <li> Könyv szerkesztése: <i> ok. </i> - <a href="/tests/EditBook.html"> link </a></li>
+ <li> Idézet hozzáadása: <i> ok. </i> - <a href="/tests/AddQuote.html"> link </a></li>
+ <li> Idézet szerkesztése: <i> ok. </i> - <a href="/tests/EditQuote.html"> link </a></li>
+ <li> Idézet törlése: <i> ok. </i> - <a href="/tests/DeleteQuote.html"> link </a></li>
+ <li> Olvasottnak jelölése: <i> ok. - </i><a href="/tests/AddRead.html"> link </a></li>
+ </ul>
+ 
  
 <h2><p><b>Felhasználói dokumentáció </b></p></h2>
 <p>
