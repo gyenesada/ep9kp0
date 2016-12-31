@@ -63,6 +63,32 @@ class RegistrationsController {
         }
     }
 
+    * loginAlt(req, res){
+       yield res.sendView('loginAlt')
+    }
+
+    * ajaxLogin(req, res){
+        const email = req.input('email')
+        const password = req.input('password')
+
+        try{
+            yield req.auth.attempt(email, password)
+            res.ok({success:true})
+        }catch(ex){
+            res.ok({success:false})
+        }
+    }
+
+    * ajaxLogout(req, res){
+        yield req.auth.logout()
+        
+        try{
+            res.ok({success:true})
+        }catch(ex){
+            res.ok({success:false})
+        }
+    }
+
 
 }
 

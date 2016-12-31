@@ -239,6 +239,10 @@ class MolyController {
 
     }
 
+    * showMenu(req, res){
+        yield res.sendView('menu')
+    }
+
     * search(req, res){
         const page = Math.max(1, req.input('p'))
         const filters = {
@@ -256,6 +260,19 @@ class MolyController {
         
         yield res.sendView('search', {books: books.toJSON(), types: types.toJSON(), filters})
     }
+
+    * ajaxDelete (req, res){
+        const quote = yield Quote.find(req.param('id'))
+        yield quote.delete()
+
+        res.ok({
+            success: true
+        })
+        res.notFound('Nem létező idézetet akarsz törölni.')
+
+        res.redirect('./')
+    }
+
 }
 
 module.exports = MolyController

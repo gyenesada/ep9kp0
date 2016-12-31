@@ -1,5 +1,9 @@
 {% extends 'master' %}
 
+{% block scripts %}
+<script src="/scripts/ajaxDelete.js"></script>
+{% endblock %}
+
 {% block content %}
 <h1> {{book.cim}} c. könyvhöz tartozó idézetek listája</h1>
 <h1></h1>
@@ -11,10 +15,27 @@
                     
                     {%if currentUser%} 
                     <hr>
-                    <a class="btn btn-primary" href="/book/{{book.id}}/quotes/{{t.id}}/delete" role="button">Törlés</a>
-                    <a class="btn btn-primary" href="/book/{{book.id}}/quotes/{{t.id}}/edit" role="button">Módosítás</a>
+                    {{ csrfField | safe }}
+                        <a class="btn btn-primary" href="/book/{{book.id}}/quotes/{{t.id}}/edit" role="button">Módosítás</a>
+                        <a class="btn btn-primary delete-class" href="/book/{{book.id}}/quotes/{{t.id}}/delete" role="button">Törlés</a>
                     {%endif%}
                 </li>
             </ul>
 {% endfor %}
+
+<span class="help-block"></span>
+
+<div class="modal fade confirm-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            Biztosan törölni szeretnéd?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success modal-ok" data-dismiss="modal">OK</button>
+            <button type="button" class="btn btn-danger modal-cancel" data-dismiss="modal">Mégse</button>
+        </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

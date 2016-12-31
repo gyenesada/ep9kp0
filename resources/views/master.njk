@@ -39,7 +39,7 @@
       
       <li><a href="/books">Keresés könyvek között</a></li>
     <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
+          <a href="/menu" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menü <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/addBook">Új könyv hozzáadása</a></li>
             <li><a href="/addQuote">Új idézet hozzáadása</a></li>
@@ -48,19 +48,19 @@
       
          {% if currentUser %}
       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Üdv {{currentUser.username}}! <span class="caret"></span></a>
+          <a href="/profile/{{currentUser.id}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Üdv {{currentUser.username}}! <span class="caret"></span></a>
           <ul class="dropdown-menu">
           
             <li><a href="/profile/{{currentUser.id}}">Profil megtekintése</a></li>
           </ul>
     </li>
-                <li><a href="/logout">Kilépés</a></li>
+                <li><a href="/logout" id="logoutButton">Kilépés</a></li>
         {%else%}
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Belépés az oldalra <span class="caret"></span></a>
+          <a href="/loginAlt" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Belépés az oldalra <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/reg">Regisztráció</a></li>
-            <li><a href="/login">Belépés</a></li>
+            <li><a href="/login" id="loginButton">Belépés</a></li>
           </ul>
         </li>
         {%endif%}
@@ -69,14 +69,31 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<span class="help-block"></span>
+
+<div class="modal fade confirm-modal_1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            Biztosan ki szeretnél jelentkezni?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success modal-ok" data-dismiss="modal">OK</button>
+            <button type="button" class="btn btn-danger modal-cancel" data-dismiss="modal">Mégse</button>
+        </div>
+        </div>
+    </div>
+</div>
 
     <div class="container">
       {%block content%}{%endblock%}
     </div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/scripts/ajaxLogin.js"></script>
+    <script src="/scripts/ajaxLogout.js"></script>
+    {%block scripts%}{%endblock%}
   </body>
 </html>
