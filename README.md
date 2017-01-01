@@ -124,6 +124,14 @@
  <p>Idézet oldal</p>
  ![Idézet](idezetoldal.png)
  
+ 
+ <h2> <p> <b> Második beadandóban történt módosítások: </b> </p> </h2>
+ <p> Mivel a második beadandóban a két menüsör legördülő menüt tartalmazott, ami kikapcsolt javascript mellett nem működött megfelelően, ezért létrehoztam két új nézetet. 
+ <ul> <li> menu.njk </li> 
+ <li> loginAlt.njk </li></ul>
+<p> A menu.njk megjeleníti a legördülő menüben lévő lehetőségeket egy külön lapon, a loginAlt.njk pedig egy alternatív bejelentkező oldal, ahonnan a regisztráció is elérhető. </p>
+
+ 
  <h2> <p> <b> JavaScript-el történő fejlesztések </b> </p> </h2>
  <ul>
  <li> <b> AJAX Funkciók </b> 
