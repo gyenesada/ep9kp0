@@ -127,19 +127,37 @@
  <h2> <p> <b> JavaScript-el történő fejlesztések </b> </p> </h2>
  <ul>
  <li> <b> AJAX Funkciók </b> 
- <ul> <li> ajaxDelete.js - Törlési megerősítés idézetek törlése közben. </li> 
- <li> ajaxLogin.js - Bejelentkezés esetén felugró ablak. </li>
- <li> ajaxLogout.js - Kijelentkezés esetén megerősítés. </li>
+ <ul> <li> ajaxDelete.js  
+   <ul><li> <i> Érintett fájlok: </i> quote.njk </li>
+ <li> <i> Működése: </i> Törlési megerősítés idézetek törlése közben. </li> </ul></li>
+ <li> ajaxLogin.js   
+ <ul><li> <i> Érintett fájlok: </i> master.njk </li>
+ <li> <i> Működése: </i> Bejelentkezés esetén felugró ablak. </li> </ul></li>
+ <li> ajaxLogout.js 
+ <ul><li> <i> Érintett fájlok: </i> master.njk </li>
+ <li> <i> Működése: </i> Kijelentkezés esetén megerősítés. </li> </ul></li>
  </ul>
  </li>
  <li> <b> Egyéb funkciók </b>
- <ul><li> Űrlap validáció - Új könyv hozzáadása esetén megvizsgálja a bemeneti adatok helyességét/meglétét.</li>
- <li> Űrlap validáció - Új idézet hozzáadása esetén megvizsgálja a bemenetei adatok helyességét/meglétét.</li>
- <li> Legördülő menü - JavaScript bekapcsolása mellett a 'Menü' fül legördülő menü lesz. </li>
- <li> Legördülő menü - JavaScript bekapcsolása mellett az 'Üdv [felhasználó]!' fül legördülő menü lesz. </li>
+ <ul><li> Űrlap validáció
+ <ul><li> <i> Érintett fájl: </i> AddBook.njk </li>
+ <li> <i> Működése: </i> </li> Kötelezővé teszi a cím, szerző, kiadó, tartalom megadását, továbbá az oldalszámot számok formájában, minimum 2 karakterrel.</ul></li>
+ <li> Űrlap validáció
+  <ul><li> <i> Érintett fájl: </i> AddQuote.njk </li>
+ <li> <i> Működése: </i> </li> Kötelezővé teszi a cím, szerző, kiadó, tartalom megadását, továbbá az oldalszámot számok formájában, minimum 2 karakterrel.</ul></li>
+ <li> Legördülő menü 
+  <ul><li> <i> Érintett fájl: </i> master.njk </li>
+ <li> <i> Működése: </i> </li> JavaScript bekapcsolása mellett a 'Menü' fül legördülő menü lesz.</ul></li>
+ <li> Legördülő menü
+   <ul><li> <i> Érintett fájl: </i> master.njk </li>
+ <li> <i> Működése: </i> </li> JavaScript bekapcsolása mellett az 'Üdv [felhasználó]!' fül legördülő menü lesz. </ul></li>
  </ul></li>
  </ul>
  
+
+ <h2> <p> <b> Szekvencia diagram </b> </p> </h2>
+ <p> Tartalmazza: Bejelentkezést (valamint regisztrációt), majd a kiválasztott könyvhöz tartozó, tetszőleges idézet törlését. </p>
+ ![Szekvencia](images/szekvencia.png)
  
  <h2> <p> <b> Funkcionális tesztelés </b> </p> </h2>
 <p> <b> Tesztesetek </b> </p>
@@ -152,9 +170,7 @@
  <li> Idézet törlése: <i> ok. </i> - <a href="/tests/DeleteQuote.html"> link </a></li>
  </ul>
  
- 
  ![Teszt](images/success.png)
- 
  
 <h2><p><b>Felhasználói dokumentáció </b></p></h2>
 <p>
